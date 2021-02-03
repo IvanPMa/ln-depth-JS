@@ -59,3 +59,27 @@ seccion.append(hr);
 
 
 // CONSEGUIR ELEMENTOS POR SU CLASE CSS
+//El getElements para seleccionar un conjunto de elementos
+var divsRojos = document.getElementsByClassName('rojo');
+var divsAmarillos = document.getElementsByClassName('amarillo');
+divsAmarillos[0].style.background = "yellow";
+
+for (var i in divsRojos){
+    if(divsRojos[i].className == 'rojo'){
+        divsRojos[i].style.background ="red";
+        console.log(divsRojos[i]);
+    }
+}
+console.log(divsRojos);
+
+//Query selctor, recomendado para cuando solo se va a seleccionar un componente 
+
+var id = document.querySelector('#encabezado');
+var claseRojo = document.querySelector('.rojo');
+console.log(claseRojo);
+console.log(id);
+
+
+//Query selctor all
+var matches = document.querySelectorAll('div');
+console.log(matches);
