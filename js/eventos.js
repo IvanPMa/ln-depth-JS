@@ -38,11 +38,13 @@ boton.addEventListener('mouseout', () =>{
 var input = document.querySelector("#campoNombre");
 
 input.addEventListener('focus', ()=>{
-    console.log("Estas dentro del input");
+    console.log("[focus] Estas dentro del input");
 });
 
 // Blur
-
+input.addEventListener('blur', ()=>{
+    console.log("[blur] Estas fuera del input");
+});
 
 // Keydown
 
