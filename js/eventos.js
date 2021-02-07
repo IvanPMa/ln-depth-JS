@@ -23,8 +23,12 @@ window.addEventListener('load',()=>{
     var boton = document.querySelector("#boton");
 
     //Click
-    boton.addEventListener('click', () =>{
+    boton.addEventListener('click', function(){
         cambiarColor();
+        // This es para seleccionar el objeto con el que estamos trabajando
+        // NOTA: tiene errores al usarlo con funcion de flecha , cambiar por funcion normal
+        this.style.border = "10px solid black";
+        
     });
 
     // Mouse over 
