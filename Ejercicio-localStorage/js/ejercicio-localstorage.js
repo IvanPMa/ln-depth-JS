@@ -3,8 +3,20 @@
 var  formulario =document.querySelector('#formPeliculas');
 
 formulario.addEventListener('submit', function(){
-    console.log("Entra");
      var titulo = document.querySelector('#addpelicula').value;
-    localStorage.setItem(titulo, titulo);
+     
+     
+     if (titulo.trim() != 0){
+        localStorage.setItem(titulo, titulo);
+
+    }
+
+    var ul = document.querySelector('#peliculas-list')
+    for (var i in localStorage ){
+        var li = document.createElement("li");
+        if(typeof localStorage[i] == 'string'){
+            li.append(localStorage[i]);
+            ul.append(li);
+        }       
+    }
 });
-//TODO: m 
