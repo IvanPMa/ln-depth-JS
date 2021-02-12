@@ -1,6 +1,6 @@
 'use strict'
 
-var  formulario =document.querySelector('#formPeliculas');
+var  formulario =document.querySelector('#formpeliculas');
 
 formulario.addEventListener('submit', function(){
      var titulo = document.querySelector('#addpelicula').value;
@@ -11,7 +11,10 @@ formulario.addEventListener('submit', function(){
 
     }
 
-    var ul = document.querySelector('#peliculas-list')
+    
+});
+
+var ul = document.querySelector('#peliculas-list')
     for (var i in localStorage ){
         var li = document.createElement("li");
         if(typeof localStorage[i] == 'string'){
@@ -19,4 +22,3 @@ formulario.addEventListener('submit', function(){
             ul.append(li);
         }       
     }
-});
