@@ -30,9 +30,30 @@ formulariob.addEventListener('submit', function(){
         
         
         if (titulo.trim() != 0){
-        localStorage.removeItem(titulo);
+            borrarPelicula(titulo);
 
     }
 
     
 });
+var busqueda= false;
+function borrarPelicula (titulo){
+    var borrar =recorrerLocalStorage(titulo);
+
+    if(borrar == true ){
+        localStorage.removeItem(titulo);
+    }
+    else{
+        alert("Pelicula no encontrada");
+    }
+}
+
+
+function recorrerLocalStorage (titulo){
+    for (var i in localStorage){
+        if (localStorage[i] == titulo){
+            return true;
+        }
+        
+    }
+}
