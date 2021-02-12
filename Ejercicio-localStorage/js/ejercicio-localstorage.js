@@ -36,7 +36,7 @@ formulariob.addEventListener('submit', function(){
 
     
 });
-var busqueda= false;
+
 function borrarPelicula (titulo){
     var borrar =recorrerLocalStorage(titulo);
 
