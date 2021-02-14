@@ -10,3 +10,5 @@ El dia es: ${dia}
 `;
 
 console.log(textoHora);
+
+console.log(Math.ceil(Math.random() * 10000))
