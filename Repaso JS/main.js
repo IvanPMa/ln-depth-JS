@@ -46,4 +46,13 @@ imprimir();
 
 var nombres = ['Ivan', 'Pelusa', 'Luisito']; 
 
-alert(nombres[1]);
+document.write('<h1>Listado de nombres</h1>');
+/*
+for (let i = 0; i < nombres.length; i++){
+    document.write(nombres[i]+ '<br>');
+}
+*/
+
+nombres.forEach((nombre) =>{
+    document.write(nombre + '<br>');
+});
